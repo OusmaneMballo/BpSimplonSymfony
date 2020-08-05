@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" filepath="$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/GestionStocksm.iml" filepath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/GestionStocksm.iml" />
     </modules>
   </component>
 </project>

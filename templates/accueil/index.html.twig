@@ -1,0 +1,69 @@
+{#{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanqueDuPeupleSymfony/src/Controller/AccueilController.php'|file_link(0) }}">src/Controller/AccueilController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanqueDuPeupleSymfony/templates/accueil/index.html.twig'|file_link(0) }}">templates/accueil/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Gestion des activites bancaires"/>
+    <meta name="author" content="mballoSoft"/>
+    {% block title %}Accueil{% endblock %}
+    <link rel="stylesheet" href="{$url_base}/public/css/main.css"/>
+    <link rel="stylesheet" href="{$url_base}/public/css/compte.css"/>
+    <link rel="stylesheet" href="{$url_base}/public/css/client.css"/>
+    <script src="{$url_base}/public/js/main.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <h1>Banque Du <span style="color: aliceblue;">Peuple</span></h1>
+    </nav>
+</header>
+
+<!--=========Debut sideBarre============-->
+<aside class="sidebarre">
+    <div class="flex">
+        <img src="{$url_base}/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
+        <p class="mail">xywzt@gmail.com</p>
+        <div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
+            <a href="{$url_base}/welcome/index">Dashboard</a>
+        </div>
+        <div class="contener">
+            <a href="{$url_base}/compte/index">Compte</a>
+        </div>
+        <div class="contener">
+            <a href="{$url_base}/client/index">Client</a>
+        </div>
+        <div class="contener">
+            Logout
+        </div>
+    </div>
+</aside>
+<!--=========Fin sideBarre============-->
+
+<!--=========Contenu du body==========-->
+<article class="content">
+    {% block body %}
+
+    {% endblock %}
+</article>
+</body>
+</html>
