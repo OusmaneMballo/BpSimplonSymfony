@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2257d48b-86b3-4b2a-a488-05cd8400c6f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accueil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accueil/index.html.twig" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Controller/ProduitController.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Controller/ProduitController.php" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Entity/User.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Entity/User.php" afterDir="false" />
@@ -45,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/accueil/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="445">
+              <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -54,7 +50,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/accueil.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1407" />
+            <state relative-caret-position="255">
+              <caret line="198" column="66" lean-forward="true" selection-start-line="198" selection-start-column="66" selection-end-line="198" selection-end-column="66" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -196,6 +194,44 @@
               <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="BanqueDuPeupleSymfony" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BanqueDuPeupleSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BanqueDuPeupleSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -238,12 +274,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596624095478</updated>
-      <workItem from="1596624097440" duration="1729000" />
+      <workItem from="1596624097440" duration="2430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1729000" />
+    <option name="totallyTimeSpent" value="2430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -314,11 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/accueil.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1407" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AccueilController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -326,10 +357,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/accueil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="198" column="66" lean-forward="true" selection-start-line="198" selection-start-column="66" selection-end-line="198" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/accueil/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="445">
+          <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
         </state>
       </provider>
     </entry>
