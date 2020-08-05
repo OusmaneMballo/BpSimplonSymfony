@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ClientMoralRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,6 +58,22 @@ class ClientMoral
      * @ORM\Column(type="string", length=30)
      */
     private $ninea;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Compte::class, mappedBy="client_moral")
+     */
+    private $comptes;
+
+    /**
+     * @ORM\OneToMany(targetEntity=ClientPhysique::class, mappedBy="client_moral")
+     */
+    private $clientPhysiques;
+
+    public function __construct()
+    {
+        $this->comptes = new ArrayCollection();
+        $this->clientPhysiques = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -157,4 +175,67 @@ class ClientMoral
 
         return $this;
     }
+
+    /**
+     * @return Collection|Compte[]
+     */
+    public function getComptes(): Collection
+    {
+        return $this->comptes;
+    }
+
+    public function addCompte(Compte $compte): self
+    {
+        if (!$this->comptes->contains($compte)) {
+            $this->comptes[] = $compte;
+            $compte->setClientMoral($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCompte(Compte $compte): self
+    {
+        if ($this->comptes->contains($compte)) {
+            $this->comptes->removeElement($compte);
+            // set the owning side to null (unless already changed)
+            if ($compte->getClientMoral() === $this) {
+                $compte->setClientMoral(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|ClientPhysique[]
+     */
+    public function getClientPhysiques(): Collection
+    {
+        return $this->clientPhysiques;
+    }
+
+    public function addClientPhysique(ClientPhysique $clientPhysique): self
+    {
+        if (!$this->clientPhysiques->contains($clientPhysique)) {
+            $this->clientPhysiques[] = $clientPhysique;
+            $clientPhysique->setClientMoral($this);
+        }
+
+        return $this;
+    }
+
+    public function removeClientPhysique(ClientPhysique $clientPhysique): self
+    {
+        if ($this->clientPhysiques->contains($clientPhysique)) {
+            $this->clientPhysiques->removeElement($clientPhysique);
+            // set the owning side to null (unless already changed)
+            if ($clientPhysique->getClientMoral() === $this) {
+                $clientPhysique->setClientMoral(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

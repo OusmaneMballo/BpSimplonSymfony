@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TypeCompteRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,6 +24,18 @@ class TypeCompte
      */
     private $libelle;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Compte::class, mappedBy="typeCompte")
+     */
+    private $compte;
+
+    public function __construct()
+    {
+        $this->compte = new ArrayCollection();
+    }
+
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -38,4 +52,36 @@ class TypeCompte
 
         return $this;
     }
+
+    /**
+     * @return Collection|Compte[]
+     */
+    public function getCompte(): Collection
+    {
+        return $this->compte;
+    }
+
+    public function addCompte(Compte $compte): self
+    {
+        if (!$this->compte->contains($compte)) {
+            $this->compte[] = $compte;
+            $compte->setTypeCompte($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCompte(Compte $compte): self
+    {
+        if ($this->compte->contains($compte)) {
+            $this->compte->removeElement($compte);
+            // set the owning side to null (unless already changed)
+            if ($compte->getTypeCompte() === $this) {
+                $compte->setTypeCompte(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

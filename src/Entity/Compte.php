@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CompteRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,6 +58,31 @@ class Compte
      * @ORM\Column(type="date", nullable=true)
      */
     private $date_reouverture;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=TypeCompte::class, inversedBy="compte")
+     */
+    private $typeCompte;
+
+    /**
+     * @ORM\OneToMany(targetEntity=FraisBancaire::class, mappedBy="compte")
+     */
+    private $frais_bancaire;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=ClientMoral::class, inversedBy="comptes")
+     */
+    private $client_moral;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=ClientPhysique::class, inversedBy="comptes")
+     */
+    private $client_physique;
+
+    public function __construct()
+    {
+        $this->frais_bancaire = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -154,6 +181,73 @@ class Compte
     public function setDateReouverture(?\DateTimeInterface $date_reouverture): self
     {
         $this->date_reouverture = $date_reouverture;
+
+        return $this;
+    }
+
+    public function getTypeCompte(): ?TypeCompte
+    {
+        return $this->typeCompte;
+    }
+
+    public function setTypeCompte(?TypeCompte $typeCompte): self
+    {
+        $this->typeCompte = $typeCompte;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|FraisBancaire[]
+     */
+    public function getFraisBancaire(): Collection
+    {
+        return $this->frais_bancaire;
+    }
+
+    public function addFraisBancaire(FraisBancaire $fraisBancaire): self
+    {
+        if (!$this->frais_bancaire->contains($fraisBancaire)) {
+            $this->frais_bancaire[] = $fraisBancaire;
+            $fraisBancaire->setCompte($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFraisBancaire(FraisBancaire $fraisBancaire): self
+    {
+        if ($this->frais_bancaire->contains($fraisBancaire)) {
+            $this->frais_bancaire->removeElement($fraisBancaire);
+            // set the owning side to null (unless already changed)
+            if ($fraisBancaire->getCompte() === $this) {
+                $fraisBancaire->setCompte(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getClientMoral(): ?ClientMoral
+    {
+        return $this->client_moral;
+    }
+
+    public function setClientMoral(?ClientMoral $client_moral): self
+    {
+        $this->client_moral = $client_moral;
+
+        return $this;
+    }
+
+    public function getClientPhysique(): ?ClientPhysique
+    {
+        return $this->client_physique;
+    }
+
+    public function setClientPhysique(?ClientPhysique $client_physique): self
+    {
+        $this->client_physique = $client_physique;
 
         return $this;
     }

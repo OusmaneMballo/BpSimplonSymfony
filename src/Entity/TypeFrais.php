@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TypeFraisRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -26,6 +28,16 @@ class TypeFrais
      * @ORM\Column(type="float")
      */
     private $frais;
+
+    /**
+     * @ORM\OneToMany(targetEntity=FraisBancaire::class, mappedBy="type_frais")
+     */
+    private $fraisBancaires;
+
+    public function __construct()
+    {
+        $this->fraisBancaires = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -52,6 +64,37 @@ class TypeFrais
     public function setFrais(float $frais): self
     {
         $this->frais = $frais;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|FraisBancaire[]
+     */
+    public function getFraisBancaires(): Collection
+    {
+        return $this->fraisBancaires;
+    }
+
+    public function addFraisBancaire(FraisBancaire $fraisBancaire): self
+    {
+        if (!$this->fraisBancaires->contains($fraisBancaire)) {
+            $this->fraisBancaires[] = $fraisBancaire;
+            $fraisBancaire->setTypeFrais($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFraisBancaire(FraisBancaire $fraisBancaire): self
+    {
+        if ($this->fraisBancaires->contains($fraisBancaire)) {
+            $this->fraisBancaires->removeElement($fraisBancaire);
+            // set the owning side to null (unless already changed)
+            if ($fraisBancaire->getTypeFrais() === $this) {
+                $fraisBancaire->setTypeFrais(null);
+            }
+        }
 
         return $this;
     }

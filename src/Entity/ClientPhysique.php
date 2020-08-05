@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ClientPhysiqueRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -66,6 +68,26 @@ class ClientPhysique
      * @ORM\Column(type="string", length=30)
      */
     private $nci;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=TypeClient::class, inversedBy="client_physique")
+     */
+    private $typeClient;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Compte::class, mappedBy="client_physique")
+     */
+    private $comptes;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=ClientMoral::class, inversedBy="clientPhysiques")
+     */
+    private $client_moral;
+
+    public function __construct()
+    {
+        $this->comptes = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -188,6 +210,61 @@ class ClientPhysique
     public function setNci(string $nci): self
     {
         $this->nci = $nci;
+
+        return $this;
+    }
+
+    public function getTypeClient(): ?TypeClient
+    {
+        return $this->typeClient;
+    }
+
+    public function setTypeClient(?TypeClient $typeClient): self
+    {
+        $this->typeClient = $typeClient;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Compte[]
+     */
+    public function getComptes(): Collection
+    {
+        return $this->comptes;
+    }
+
+    public function addCompte(Compte $compte): self
+    {
+        if (!$this->comptes->contains($compte)) {
+            $this->comptes[] = $compte;
+            $compte->setClientPhysique($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCompte(Compte $compte): self
+    {
+        if ($this->comptes->contains($compte)) {
+            $this->comptes->removeElement($compte);
+            // set the owning side to null (unless already changed)
+            if ($compte->getClientPhysique() === $this) {
+                $compte->setClientPhysique(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getClientMoral(): ?ClientMoral
+    {
+        return $this->client_moral;
+    }
+
+    public function setClientMoral(?ClientMoral $client_moral): self
+    {
+        $this->client_moral = $client_moral;
 
         return $this;
     }
