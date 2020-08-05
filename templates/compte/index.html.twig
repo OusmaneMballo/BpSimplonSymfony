@@ -1,20 +1,35 @@
-{% extends 'base.html.twig' %}
+{% extends 'index.html.twig' %}
 
-{% block title %}Hello CompteController!{% endblock %}
+{% block title %}Compte | Home{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <article class="content">
+        <fieldset>
+            <legend>Creation Compte</legend>
+            <form action="#" class="form" method="post" onsubmit="return post()">
+                <div class="row">
+                    <select name="typecp" class="selectcmpt" id="typecp" onchange="frais()">
+                        <option value="0">--Type Compte--</option>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                    </select>
+                    <label for="frai">Frais:<b id="frai"></b></label>
+                </div>
+                <div class="row">
+                    <select name="client" id="client" class="selectcmpt">
+                        <option value="0">--------------Clients--------------</option>
+                        <option value="0"><b>------List Clients Morals-------</b></option>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanqueDuPeupleSymfony/src/Controller/CompteController.php'|file_link(0) }}">src/Controller/CompteController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanqueDuPeupleSymfony/templates/compte/index.html.twig'|file_link(0) }}">templates/compte/index.html.twig</a></code></li>
-    </ul>
-</div>
+                        <option value="0"><b>------List Clients Physiques------</b></option>
+
+                    </select>
+                    <label for="solde">Solde</label>
+                    <input type="text" class="inputcl" id="solde" name="solde" required/>
+                </div>
+                <div class="row">
+                    <button type="submit" class="valider">Ajouter</button>
+                    <button type="reset" class="annuler">Annuler</button>
+                </div>
+            </form>
+        </fieldset>
+    </article>
 {% endblock %}
