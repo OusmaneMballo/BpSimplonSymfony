@@ -26,9 +26,9 @@
     <meta name="description" content="Gestion des activites bancaires"/>
     <meta name="author" content="mballoSoft"/>
     {% block title %}Accueil{% endblock %}
-    <link rel="stylesheet" href="{$url_base}/public/css/main.css"/>
-    <link rel="stylesheet" href="{$url_base}/public/css/compte.css"/>
-    <link rel="stylesheet" href="{$url_base}/public/css/client.css"/>
+    <link rel="stylesheet" href={{ ('layout/css/compte.css') }}/>
+    <link rel="stylesheet" href={{ ('layout/css/client.css') }}/>
+    <link rel="stylesheet" href={{ ('layout/css/main.css') }}/>
 </head>
 <body>
 <header>
@@ -40,16 +40,16 @@
 <!--=========Debut sideBarre============-->
 <aside class="sidebarre">
     <div class="flex">
-        <img src="{$url_base}/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
+        <img src={{ ('layout/img/profil.jpg') }} class="profil" alt="Banque du Peuple" srcset=""/>
         <p class="mail">xywzt@gmail.com</p>
         <div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
-            <a href="{$url_base}/welcome/index">Dashboard</a>
+            <a href="#">Dashboard</a>
         </div>
         <div class="contener">
-            <a href="{$url_base}/compte/index">Compte</a>
+            <a href="#">Compte</a>
         </div>
         <div class="contener">
-            <a href="{$url_base}/client/index">Client</a>
+            <a href="#">Client</a>
         </div>
         <div class="contener">
             Logout
@@ -65,5 +65,7 @@
     {% endblock %}
 </article>
 <script src={{ ('layout/js/main.js') }}></script>
+<script src={{ ('layout/js/client.js') }}></script>
+<script src={{ ('layout/js/compte.js') }}></script>
 </body>
 </html>
