@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" filepath="$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" />
       <module fileurl="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/GestionStocksm.iml" filepath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/GestionStocksm.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/ProjetWeb/my_project_name/.idea/my_project_name.iml" filepath="$USER_HOME$/Desktop/ProjetWeb/my_project_name/.idea/my_project_name.iml" />
     </modules>
   </component>
 </project>

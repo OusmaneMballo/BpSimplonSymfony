@@ -76,7 +76,9 @@
                                 <input type="text" class="inputcl" id="cnicp" name="cnicp"/>
                                 <select name="statutcp" id="statutcp" class="slct2 selectclt" onchange="salaryForm()">
                                     <option value="0">--Statut Client--</option>
-
+                                    {% for tc in typeclients %}
+                                        <option value="{{ tc.id }}">{{ tc.id }}-{{ tc.libelle }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="row" id="salarier" hidden>

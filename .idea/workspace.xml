@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2257d48b-86b3-4b2a-a488-05cd8400c6f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BanqueDuPeupleSymfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AccueilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccueilController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CompteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CompteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accueil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/client/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/compte/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/compte/index.html.twig" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Controller/ProduitController.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Controller/ProduitController.php" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Entity/User.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Entity/User.php" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Form/ProduitFormType.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Form/ProduitFormType.php" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/produit/list.html.twig" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/produit/list.html.twig" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ProjetWeb/my_project_name/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ProjetWeb/my_project_name/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/client/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="31" selection-start-column="31" selection-end-column="31" />
+            <state relative-caret-position="445">
+              <caret line="79" column="105" lean-forward="true" selection-start-line="79" selection-start-column="105" selection-end-line="79" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -44,11 +44,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/compte/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="31" selection-start-column="31" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/produit/list.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="26" />
+              <folding>
+                <element signature="e#34#61#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,12 +88,12 @@
         <option value="$PROJECT_DIR$/src/Entity/TypeClient.php" />
         <option value="$PROJECT_DIR$/src/Entity/ClientMoral.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/src/Controller/ClientController.php" />
         <option value="$PROJECT_DIR$/src/Controller/CompteController.php" />
         <option value="$PROJECT_DIR$/templates/accueil/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/AccueilController.php" />
-        <option value="$PROJECT_DIR$/templates/client/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/compte/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ClientController.php" />
+        <option value="$PROJECT_DIR$/templates/client/index.html.twig" />
       </list>
     </option>
   </component>
@@ -196,23 +217,18 @@
           <expand>
             <path>
               <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BanqueDuPeupleSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BanqueDuPeupleSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BanqueDuPeupleSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BanqueDuPeupleSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanqueDuPeupleSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStocksm" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="produit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,12 +282,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596624095478</updated>
-      <workItem from="1596624097440" duration="10457000" />
+      <workItem from="1596624097440" duration="12095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10457000" />
+    <option name="totallyTimeSpent" value="12095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -402,13 +418,6 @@
         <state relative-caret-position="-138" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/accueil.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -419,13 +428,6 @@
     <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/home/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1270" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/produit/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CompteController.php">
@@ -463,17 +465,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/client/index.html.twig">
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/src/Controller/ProduitController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/my_project_name/src/Controller/PinsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/my_project_name/templates/pins/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/my_project_name/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/my_project_name/templates/proprety/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/my_project_name/templates/pins/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/compte/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/compte/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        <state relative-caret-position="445">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="26" />
+          <folding>
+            <element signature="e#34#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ProjetWeb/GestionStocksm/templates/produit/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/client/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="79" column="105" lean-forward="true" selection-start-line="79" selection-start-column="105" selection-end-line="79" selection-end-column="105" />
         </state>
       </provider>
     </entry>

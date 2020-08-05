@@ -107,6 +107,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="my_project_name" />
     <orderEntry type="module" module-name="GestionStocksm" />
   </component>
 </module>
