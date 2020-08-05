@@ -1,0 +1,116 @@
+body{
+    background-color: whitesmoke;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    width: 100%;
+    height: 75px;
+    margin-top: -20px;
+    padding: 2px;
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav h1{
+    font-size: x-large;
+    text-align: justify;
+    flex-direction: row;
+    color: rgb(85, 163, 231)
+    
+}
+
+button{
+    width: 40%;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.valider{
+    background-color: rgb(85, 163, 231);
+    border: solid 1px rgb(85, 163, 231);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}
+
+.annuler{
+    background-color: rgb(141, 24, 24);
+    border: solid 1px rgb(141, 24, 24);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}
+
+.valider:hover{
+    background-color: rgba(85, 163, 231, 0.838);
+    cursor: pointer; 
+}
+
+.annuler:hover{
+    background-color: rgba(141, 24, 24, 0.838);   
+}
+
+.sidebarre{
+    float: left;
+    height: auto;
+    width: 17%;
+    position: relative;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
+.flex div{
+    width: 90%;
+    color: black;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 10px;
+}
+
+.flex div:hover{
+    background-color: rgb(85, 163, 231);
+    color: whitesmoke;
+}
+.flex div a{
+    text-decoration: none;
+    font-style: none;
+    color: black;
+}
+.flex div a:hover{
+    color: whitesmoke;
+}
+.profil{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+}
+.mail{
+    margin-left: 4px;
+    margin-bottom: 35px;
+    color: rgb(85, 163, 231);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.icon{
+    width: 30px;
+    height: 25px;
+    margin-right: 20px;
+}
+.content{
+    position: relative;
+    float:right;
+    width: 83%;
+
+}

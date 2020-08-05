@@ -1,0 +1,57 @@
+fieldset{
+    border: solid 1px rgb(85, 163, 231);
+}
+fieldset legend{
+    color: rgb(85, 163, 231);
+}
+.formulaire{
+    display: flex;
+    flex-direction: row;
+}
+.formulaire fieldset{
+    width: 95%;
+    height: auto;
+    margin-right:10px;
+}
+
+.inputcl{
+    width: 30%;
+    height: 30px;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: rgb(58, 80, 102);
+    border: solid 1px rgb(85, 163, 231);
+    border-radius: 15px;
+}
+.inputcl:hover{
+    background-color: rgb(210, 216, 223);
+}
+.inputcl:focus{
+    border-radius: 5px;
+    background-color: rgba(245, 245, 245, 0.762);
+}
+
+label{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(58, 80, 102);
+}
+
+.selectclt{
+    border: solid 1px rgb(85, 163, 231);
+    border-radius: 5px;
+    color: rgb(85, 163, 231);
+    height: 30px;
+}
+
+.slct{
+    width: 50%;
+    margin-left: 210px;
+    font-size: 20px;
+}
+
+.slct2{
+    width: 47%;
+    margin-top: 10px;
+}

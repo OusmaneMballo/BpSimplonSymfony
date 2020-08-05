@@ -1,0 +1,40 @@
+fieldset{
+    border: solid 1px rgb(85, 163, 231);
+    padding-left: 50px;
+}
+fieldset legend{
+    color: rgb(85, 163, 231);
+}
+
+input{
+    width: 1%;
+    height: 30px;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: rgb(58, 80, 102);
+    border: solid 1px rgb(85, 163, 231);
+    border-radius: 20px;
+}
+input:hover{
+    background-color: rgb(210, 216, 223);
+}
+input:focus{
+    border-radius: 5px;
+    background-color: rgba(245, 245, 245, 0.762);
+}
+
+label{
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(58, 80, 102);
+}
+
+.selectcmpt{
+    border: solid 1px rgb(85, 163, 231);
+    border-radius: 5px;
+    color: rgb(85, 163, 231);
+    height: 1%;
+    width: 300px;
+    margin-top: 10px;
+}
