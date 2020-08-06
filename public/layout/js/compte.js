@@ -46,7 +46,7 @@ function frais(){
     let choix = typeCompte.selectedIndex;
     let type = typeCompte.options[choix].text;
 
-    if (type === "Xewel" || type === "Epargne") {
+    if (type === "Epargne") {
         document.getElementById('frai').innerHTML = "450F cfa";
     }
     else {
@@ -54,7 +54,13 @@ function frais(){
             document.getElementById('frai').innerHTML = '700F cfa';
         }
         else {
-            document.getElementById('frai').innerHTML = '0F cfa';
+            if(type === "Xewel")
+            {
+                document.getElementById('frai').innerHTML = '400F cfa';
+            }
+            else{
+                document.getElementById('frai').innerHTML = '0F cfa';
+            }
         }
     }
 }
