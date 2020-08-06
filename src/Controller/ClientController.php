@@ -59,7 +59,9 @@ class ClientController extends AbstractController
                 elseif ($request->request->get('typeclient')==1)
                 {
                     //Cas d'un client physique
-                    $this->addCM($request);
+
+                    $this->addCP($request);
+                    return $this->redirectToRoute('app_client_index');
                 }
             }
         }
@@ -71,7 +73,7 @@ class ClientController extends AbstractController
     /**
      * fonction d'ajout d'un client moral
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @return int|null
      */
     private function addCM(Request $request)
     {
@@ -89,8 +91,51 @@ class ClientController extends AbstractController
         return $client->getId();
     }
 
+    /**
+     * Fonction d'ajout d'un client physique
+     * @param Request $request
+     * @return int|null
+     */
     private function addCP(Request $request)
     {
         $client=new ClientPhysique();
+        $client->setNom($request->request->get('nomcp'));
+        $client->setPrenom($request->request->get('prenomcp'));
+        $client->setNci($request->request->get('cnicp'));
+        $client->setProfession($request->request->get('professioncp'));
+        $client->setTelephone($request->request->get('telephonecp'));
+        $client->setAdresse($request->request->get('adressecp'));
+        $client->setLogin($request->request->get('logincp'));
+        $client->setPasswd($request->request->get('passwdcp'));
+        $client->setEmail($request->request->get('emailcp'));
+        $client->setTypeClient($this->typeclient_repository->find($request->request->get('statutcp')));
+
+        if($request->request->get('statutcp')==1)
+        {
+            /*===========Cas d'un salarier==========*/
+
+            $client->setSalaire($request->request->get('salairecp'));
+
+            if($request->request->get('employeur')==-1)
+            {
+                /*cas d'un salarier dont son employeur n'est pas
+                un client de la banque*/
+
+                $idEmp=$this->addCM($request);
+                $client->setClientMoral($this->clt_moral_repository->find($idEmp));
+            }
+            else
+            {
+                /*============================================*
+                 * cas d'un salarier dont son employeur est
+                 *   un client de la banque
+                 *============================================*/
+
+                $client->setClientMoral($this->clt_moral_repository->find($request->request->get('employeur')));
+            }
+        }
+        $this->em->persist($client);
+        $this->em->flush();
+        return $client->getId();
     }
 }
