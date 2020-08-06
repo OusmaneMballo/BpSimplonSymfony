@@ -6,7 +6,10 @@
     <article class="content">
         <fieldset>
             <legend>Creation Client</legend>
-            <form class="form" onsubmit="return post()" method="post" action="#">
+            <form class="form" onsubmit="return post()" method="post" action="{{ path('app_client_add') }}">
+                <div>
+                    <input type="hidden" name="token" value="{{ csrf_token('client_token') }}">
+                </div>
                 <div>
                     <select name="typeclient" id="typeclient" class="slct selectclt" onchange="typeClient()">
                         <option value="0">--Choix du Type de Client--</option>
@@ -31,7 +34,7 @@
                                 <input type="email" class="inputcl" id="emailCM" name="emailCM"/>
                             </div>
                             <div class="row">
-                                <label for="identifiantCM">Identifiant</label>
+                                <label for="identifiantCM">Ninea</label>
                                 <input type="text" class="inputcl" id="identifiantCM" name="identifiantCM"/>
                                 <label for="telephoneCM">Telephone</label>
                                 <input type="text" class="inputcl" id="telephoneCM" name="telephoneCM"/>
@@ -76,8 +79,8 @@
                                 <input type="text" class="inputcl" id="cnicp" name="cnicp"/>
                                 <select name="statutcp" id="statutcp" class="slct2 selectclt" onchange="salaryForm()">
                                     <option value="0">--Statut Client--</option>
-                                    {% for tc in typeclients %}
-                                        <option value="{{ tc.id }}">{{ tc.id }}-{{ tc.libelle }}</option>
+                                    {% for typeclient in typeclients %}
+                                        <option value="{{ typeclient.id }}">{{ typeclient.id }}-{{ typeclient.libelle }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -98,6 +101,9 @@
                     <button type="reset" class="annuler" id="annuler" disabled>Annuler</button>
                 </div>
             </form>
+            {% if(error==1) %}
+                <b><i>Erreur client non ajoute!...</i></b>
+            {% endif %}
         </fieldset>
         <div id="affiche"></div>
     </article>
