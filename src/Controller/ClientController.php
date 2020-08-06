@@ -34,10 +34,12 @@ class ClientController extends AbstractController
     public function index()
     {
         $data['typeclients']=$this->typeclient_repository->findAll();
+        $data['client_morals']=$this->clt_moral_repository->findAll();
         $data['error']=0;
         return $this->render('client/index.html.twig',$data);
     }
 
+    //===============Fonction d'ajout d'un client moral ou physique=======
     /**
      * @Route("/client/addClient", name="app_client_add", methods={"POST|PATCH"})
      */
