@@ -6,7 +6,8 @@
     <article class="content">
         <fieldset>
             <legend>Creation Compte</legend>
-            <form action="#" class="form" method="post" onsubmit="return post()">
+            <form action="{{ path('app_compte_add') }}" class="form" method="post" onsubmit="return post()">
+                <input type="hidden" name="token" value="{{ csrf_token('compte_token') }}">
                 <div class="row">
                     <select name="typecp" class="selectcmpt" id="typecp" onchange="frais()">
                         <option value="0">--Type Compte--</option>
@@ -21,11 +22,11 @@
                         <option value="0">--------------Clients--------------</option>
                         <option value="0"><b>------List Clients Morals-------</b></option>
                         {% for clientmoral in client_morals %}
-                            <option value="{{ clientmoral.id }}">{{ clientmoral.id }}-{{ clientmoral.nom }}</option>
+                            <option value="{{ clientmoral.id }}-cm">{{ clientmoral.id }}-{{ clientmoral.nom }}</option>
                         {% endfor %}
                         <option value="0"><b>------List Clients Physiques------</b></option>
                         {% for clientphysique in client_physiques %}
-                            <option value="{{ clientphysique.id }}">{{ clientphysique.id }}-<b>{{ clientphysique.prenom }} {{ clientphysique.nom }}</b></option>
+                            <option value="{{ clientphysique.id }}-cp">{{ clientphysique.id }}-<b>{{ clientphysique.prenom }} {{ clientphysique.nom }}</b></option>
                         {% endfor %}
                     </select>
                     <label for="solde">Solde</label>

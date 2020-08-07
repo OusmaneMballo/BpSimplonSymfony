@@ -35,11 +35,6 @@ class Compte
     private $etat;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $create_at;
-
-    /**
      * @ORM\Column(type="float")
      */
     private $solde;
@@ -78,6 +73,11 @@ class Compte
      * @ORM\ManyToOne(targetEntity=ClientPhysique::class, inversedBy="comptes")
      */
     private $client_physique;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $create_at;
 
     public function __construct()
     {
@@ -121,18 +121,6 @@ class Compte
     public function setEtat(string $etat): self
     {
         $this->etat = $etat;
-
-        return $this;
-    }
-
-    public function getCreateAt(): ?\DateTimeInterface
-    {
-        return $this->create_at;
-    }
-
-    public function setCreateAt(\DateTimeInterface $create_at): self
-    {
-        $this->create_at = $create_at;
 
         return $this;
     }
@@ -251,4 +239,17 @@ class Compte
 
         return $this;
     }
+
+    public function getCreateAt(): ?string
+    {
+        return $this->create_at;
+    }
+
+    public function setCreateAt(string $create_at): self
+    {
+        $this->create_at = $create_at;
+
+        return $this;
+    }
+
 }

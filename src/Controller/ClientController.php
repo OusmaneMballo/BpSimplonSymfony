@@ -109,7 +109,6 @@ class ClientController extends AbstractController
         $client->setPasswd($request->request->get('passwdcp'));
         $client->setEmail($request->request->get('emailcp'));
         $client->setTypeClient($this->typeclient_repository->find($request->request->get('statutcp')));
-
         if($request->request->get('statutcp')==1)
         {
             /*===========Cas d'un salarier==========*/
